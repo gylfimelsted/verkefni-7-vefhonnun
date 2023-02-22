@@ -1,0 +1,472 @@
+/*verður að vera efst*/
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+header {
+    background-color: rgb(203, 201, 201);
+    grid-area: header;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    position: fixed;
+    width: 100%;
+}
+
+header li {
+    display: inline;
+    padding-left: 50px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
+
+header li a:hover {
+    color: royalblue;
+    transition: 0.3s;
+}
+
+header ul #website a {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    float: right;
+    position: relative;
+    top: -15px;
+
+}
+
+header ul #website a:hover {
+    background-color: rgb(136, 137, 138);
+}
+
+
+/*TAFLA MEÐ LÖGUM*/
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 20px;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: 0;
+      }
+    
+      table caption {
+        font-size: 20px;
+      }
+      
+      table thead {
+        border: none;
+        overflow: hidden;
+        padding: 5px;
+        position: absolute;
+        width: 1px;
+       
+      }
+      
+      table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 15px;
+      }
+      
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 15px;
+        text-align: right;
+      }
+      
+      table td::before {  
+        content: attr(data);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+
+
+    /*SECTION Í MAIN*/
+    
+nav {
+
+    grid-area: nav;
+
+}
+
+section {
+
+    grid-area: section;
+
+}
+
+aside {
+
+    grid-area: aside;
+
+}
+
+footer {
+    grid-area: footer;
+    flex-shrink: 0;
+}
+
+nav,
+section,
+aside,
+footer {
+    padding: 10px;
+}
+
+
+
+a:hover {
+    color: white;
+}
+
+/*boxin í footer*/
+.box a {
+    grid-area: a;
+
+}
+
+.box b {
+    grid-area: b;
+
+}
+
+.boxc {
+    grid-area: c;
+
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+ol {
+    list-style-type: none;
+}
+
+
+
+
+
+/*main content stærða skipti*/
+
+body {
+    font-family: 'Julee', cursive;
+    background-color: gray;
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "section"
+        "nav"
+        "aside";
+    grid-template-columns: 1fr;
+
+    background: linear-gradient(white, gray);
+
+}
+
+
+
+@media screen and (min-width: 37.5em) {
+    main {
+        display: grid;
+        background: linear-gradient(white, gray);
+
+        padding: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "section section"
+            "aside nav";
+
+    }
+}
+
+@media screen and (min-width: 48em) {
+    main {
+        display: grid;
+        background: linear-gradient(white, gray);
+
+        padding: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 100%;
+        grid-template-areas:
+            "header header header"
+            "section nav aside";
+
+    }
+}
+
+
+/*myndir grid wrapper 3!*/
+
+.wrapper3 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+@media screen and (min-width: 37.5em) {
+    .wrapper3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}
+
+
+@media screen and (min-width: 48em) {
+    .wrapper3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}
+
+
+a:hover {
+    color: white;
+}
+
+/*boxin í footer*/
+/*map box a*/
+.box a {
+    grid-area: a;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+iframe {
+    width: 90%;
+    height: 555px;
+}
+
+.box b {
+    grid-area: b;
+    height: 555px;
+    width: 100%;
+    display: flex;
+    
+    
+}
+
+/*boxc er form*/
+.boxc {
+    grid-area: c;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: darkgrey;
+    padding: 2em 0 2em 0;
+    border: solid black 2px;
+    box-shadow: 1px black;
+    margin-top: 53px;
+    }
+
+ 
+input{
+    
+    padding: 12px;
+    border: 1px solid black;
+    box-shadow: 1px black;
+    border-radius: 4px;
+   
+}
+.efstuinp{
+    margin-bottom: 15px;    
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.sendatakki{
+    float: right;
+    margin: 10px;
+
+}
+.auka{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family:cursive ;
+    font-size: 1em;
+}
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-type: none;
+}
+
+/*wrapper2 = footer*/
+
+
+.wrapper2 {
+    height: 100%;
+    display: grid;
+    flex: 1 0 auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    grid-template-areas:
+        "b"
+        "c"
+        "a";
+}
+
+@media screen and (min-width: 37.5em) {
+    .wrapper2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+            "b b"
+            "c c"
+            "a a";
+
+    }
+}
+
+
+@media screen and (min-width: 48em) {
+    .wrapper2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+            "a c b";
+
+    }
+}
+
+
+/* mynd með texta*/
+.skorinmynd {
+    grid-gap: 10px;
+    display: grid;
+    float: right;
+    background: linear-gradient(gray, white);
+    padding: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "mynd"
+        "texti";
+}
+
+.myndsk {
+    grid-area: mynd;
+}
+
+.texti {
+    grid-area: texti;
+}
+
+@media screen and (min-width: 48em) {
+    .skorinmynd {
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+        grid-template-areas:
+            "mynd texti";
+
+    }
+}
+
+.upp {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(89, 163, 190);
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 40px;
+    font-size: 30px;
+    line-height: 70px;
+
+}
+
+.UPP a {
+    color: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.upp:hover {
+    color: white;
+    opacity: 0.6;
+    transition: 0.3s;
+}
